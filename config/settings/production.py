@@ -17,7 +17,7 @@ DATABASES = {
         'USER': 'puvivbqxsyuzgw',
         'PASSWORD': '387152efef718090bdd168d6d0a0ce9ac0fcc72c495fbadbe1c1255d7583d26c',
         'HOST': 'ec2-52-22-216-69.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'PORT': 5432,
         'OPTIONS': {
             'options': '-c search_path=prueba'
         },
