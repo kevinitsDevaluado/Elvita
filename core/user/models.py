@@ -4,7 +4,7 @@ from django.forms import model_to_dict
 
 from crum import get_current_request
 
-from config.settings.local import MEDIA_URL, STATIC_URL
+from config.production import MEDIA_URL, STATIC_URL
 
 
 class User(AbstractUser):

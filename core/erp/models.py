@@ -3,7 +3,7 @@ from datetime import datetime
 from django.db import models
 from django.forms import model_to_dict
 
-from config.settings.local import MEDIA_URL, STATIC_URL
+from config.production import MEDIA_URL, STATIC_URL
 from core.erp.choices import gender_choices
 from core.models import BaseModel
 

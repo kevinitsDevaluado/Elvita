@@ -8,13 +8,16 @@ from django.views.generic import FormView, RedirectView
 
 import config.settings as setting
 
+from config import production
+
+
 
 class LoginFormView(LoginView):
     template_name = 'login.html'
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            return redirect(setting.local.LOGIN_REDIRECT_URL)
+            return redirect(production.LOGIN_REDIRECT_URL)
         return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
@@ -26,7 +29,7 @@ class LoginFormView(LoginView):
 class LoginFormView2(FormView):
     form_class = AuthenticationForm
     template_name = 'login.html'
-    success_url = reverse_lazy(setting.local.LOGIN_REDIRECT_URL)
+    success_url = reverse_lazy(production.LOGIN_REDIRECT_URL)
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
